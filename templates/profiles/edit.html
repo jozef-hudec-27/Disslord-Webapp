@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div align="center">
+    <h1 style="color: #e3acf2; font-weight: bold;">Edit User Profile</h1>
+    <br><br>
+
+    <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+        {% for field in form %}
+            <h4>{{ field.label }}:</h4>
+            {{ field }}
+            <br><br>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit" style="background-color: #6B46C1;">Edit</button>
+        <br><br>
+    </form> 
+
+</div>
+
+{% endblock content %}

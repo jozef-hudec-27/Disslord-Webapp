@@ -1,0 +1,12 @@
+*** MAIN DIRECTORY ***
+python -m venv env
+env\Scripts\activate
+pip install -r requirements.txt
+py manage.py collectstatic
+py manage.py migrate
+py manage.py migrate --run-syncdb
+
+
+*** disslord-web ***
+npm install
+

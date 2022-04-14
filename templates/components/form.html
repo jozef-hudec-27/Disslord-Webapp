@@ -1,0 +1,11 @@
+<form method="POST" action="">{% csrf_token %}
+
+    {{ form.as_p }}
+    <button class="btn btn-secondary" type="submit">
+        {% if btn_label %}
+            {{ btn_label }}
+        {% else %}
+            Save
+        {% endif %}
+    </button>
+</form>
